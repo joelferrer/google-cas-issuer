@@ -1,3 +1,6 @@
+global:
+  projectID: "test"
+
 crds:
   # This option decides if the CRDs should be installed
   # as part of the Helm installation.
@@ -37,6 +40,10 @@ imagePullSecrets: []
 commonLabels: {}
 
 serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # The name of the service account to use if create is false
+  name: ""
   # Optional annotations to add to the service account
   annotations: {}
 
